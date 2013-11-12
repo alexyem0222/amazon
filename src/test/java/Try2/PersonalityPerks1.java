@@ -1,5 +1,6 @@
 package Try2;
 
+import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 import org.openqa.selenium.By;
@@ -50,5 +51,12 @@ public class PersonalityPerks1 {
 
 
     }
+
+    @After
+    public void tearDown() throws Exception {
+        driver.quit();
+    }
+
+
 
 }
