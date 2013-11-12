@@ -43,7 +43,7 @@ WebDriver driver = new FirefoxDriver();
         for (String handle : driver.getWindowHandles()) {
             driver.switchTo().window(handle);
         }
-
+    }
     @After
     public void tearDown() throws Exception {
         driver.quit();
