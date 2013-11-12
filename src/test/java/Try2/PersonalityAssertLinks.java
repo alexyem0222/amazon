@@ -44,8 +44,8 @@ WebDriver driver = new FirefoxDriver();
             driver.switchTo().window(handle);
         }
 
-
-        //driver.switchTo().window("Hotel Diva - Reservations");
-
+    @After
+    public void tearDown() throws Exception {
+        driver.quit();
     }
 }
