@@ -47,7 +47,7 @@ public class PersonalityPerks1 {
         if (specialtexttry.getAttribute("value")!= ""){
             specialtexttry.clear();
         }
-        specialtexttry.sendKeys("Ne xochy nikogo");
+        specialtexttry.sendKeys("Chort pobeiri");
 
 
     }
