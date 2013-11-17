@@ -13,9 +13,7 @@ import org.junit.runners.Suite;
 @RunWith(Suite.class)
 @Suite.SuiteClasses({
         PersonalityAssertLinks.class,
-        PersonalityPerks1.class,
-        Packages.class,
-        RegisteredUserLogin.class
+        PersonalityPerks1.class
 })
 
 public class PersonalityPerksSuite {
