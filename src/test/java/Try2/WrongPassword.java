@@ -35,10 +35,11 @@ public class WrongPassword {
         password.sendKeys("love@23");   //correct password is love@22
 
         loginbutton.click();
+        Assert.assertTrue(driver.getPageSource().contains("We're sorry, but we were unable to log you in to your Personality Perks account!"));
         //WebElement logoutlink = driver.findElement(By.xpath("/html/body/div/div[2]/div/div/ul/li[5]/a"));
         //Assert.assertTrue("Verify logout link is displayed", logoutlink.isDisplayed());
-        WebElement logoutlink = wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("/html/body/div/div[2]/div/div/ul/li[5]/a")));
-        logoutlink.click();
+       // WebElement logoutlink = wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("/html/body/div/div[2]/div/div/ul/li[5]/a")));
+        //logoutlink.click();
     }
 
     @After
