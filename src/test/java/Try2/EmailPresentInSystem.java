@@ -1,4 +1,5 @@
 package Try2;
+import org.junit.After;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
@@ -37,5 +38,9 @@ public class EmailPresentInSystem {
         submitbtn.click();
 
         Assert.assertTrue(driver.getPageSource().contains("The e-mail address, love2@love.com, is already in use!")) ;
+}
+    @After
+    public void tearDown() throws Exception {
+        driver.quit();
 }
 }
