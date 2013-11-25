@@ -16,7 +16,8 @@ import org.junit.runners.Suite;
         PersonalityPerks1.class,
         Packages.class,
         RegisteredUserLogin.class,
-        WrongPassword.class
+        WrongPassword.class,
+        EmailPresentInSystem.class
 
 })
 
