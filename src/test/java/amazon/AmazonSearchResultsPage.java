@@ -9,7 +9,7 @@ public class AmazonSearchResultsPage {
     private WebDriver driver;
 
     //@FindBy(css="#result_0.fstRow h3.newaps a")
-    @FindBy(xpath="/html/body/div[2]/div[3]/div/div/div[2]/div[4]/div/h3/a/span")
+    @FindBy(xpath="/html/body/div[2]/div[3]/div/div/div[2]/div[4]/div[2]/div[3]/h3/a")
     private WebElement topResultTitle;
 
     public AmazonSearchResultsPage(WebDriver driver) {

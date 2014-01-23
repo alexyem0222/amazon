@@ -22,7 +22,7 @@ public class BetterAmazonSearchTest {
     public void search_amazon() throws InterruptedException {
         AmazonHomePage homePage = AmazonHomePage.navigateTo(driver);
         AmazonSearchResultsPage resultsPage = homePage.searchFor("iain banks");
-        assertThat(resultsPage.getTopResultTitle(), is("The Quarry"));
+        assertThat(resultsPage.getTopResultTitle(), is("Amazon's Iain Banks Page"));
     }
 
     @After
