@@ -23,8 +23,8 @@ public class BetterAmazonSearchTest {
         driver.quit();
     }
 
-    @Test public void
-    search_amazon() {
+    @Test
+    public void search_amazon() throws InterruptedException {
         AmazonHomePage homePage = AmazonHomePage.navigateTo(driver);
         AmazonSearchResultsPage resultsPage = homePage.searchFor("iain banks");
         assertThat(resultsPage.getTopResultTitle(), is("The Quarry"));

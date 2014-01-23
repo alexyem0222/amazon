@@ -8,14 +8,16 @@ public class AmazonSearchResultsPage {
 
     private WebDriver driver;
 
-    @FindBy(css="#result_0.fstRow h3.newaps a")
+    //@FindBy(css="#result_0.fstRow h3.newaps a")
+    @FindBy(xpath="/html/body/div[2]/div[3]/div/div/div[2]/div[4]/div/h3/a/span")
     private WebElement topResultTitle;
 
     public AmazonSearchResultsPage(WebDriver driver) {
         this.driver = driver;
     }
 
-    public String getTopResultTitle() {
+    public String getTopResultTitle() throws InterruptedException {
+        Thread.sleep(2000);
         return topResultTitle.getText();
     }
 

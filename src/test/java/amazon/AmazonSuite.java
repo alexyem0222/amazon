@@ -9,8 +9,6 @@ import amazon.BetterAmazonSearchTest;
 
 @RunWith(Suite.class)
 @Suite.SuiteClasses({
-        AmazonHomePage.class,
-        AmazonSearchResultsPage.class,
         BetterAmazonSearchTest.class
 })
 
