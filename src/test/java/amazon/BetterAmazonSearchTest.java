@@ -17,11 +17,6 @@ public class BetterAmazonSearchTest {
         driver = new FirefoxDriver();
     }
 
-    @After
-    public void closeSelenium() {
-        driver.close();
-        driver.quit();
-    }
 
     @Test
     public void search_amazon() throws InterruptedException {
@@ -29,4 +24,10 @@ public class BetterAmazonSearchTest {
         AmazonSearchResultsPage resultsPage = homePage.searchFor("iain banks");
         assertThat(resultsPage.getTopResultTitle(), is("The Quarry"));
     }
+
+    @After
+    public void closeSelenium() {
+        driver.close();
+        driver.quit();
+}
 }
