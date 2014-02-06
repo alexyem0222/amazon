@@ -1,16 +1,11 @@
 package Various;
 
-import amazon.BetterAmazonSearchTest;
 import org.junit.runner.RunWith;
 import org.junit.runners.Suite;
 
 
-import org.junit.runner.RunWith;
-import org.junit.runners.Suite;
-
-import amazon.AmazonHomePage;
-import amazon.AmazonSearchResultsPage;
-import amazon.BetterAmazonSearchTest;
+import Various.SignUpPageRequiredFields;
+import Various.DBConnectionTry;
 
 
 @RunWith(Suite.class)
