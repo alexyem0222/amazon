@@ -1,6 +1,6 @@
 package SuperPersonality;
 
-import Various.DBConnectionTry;
+
 import org.junit.runner.RunWith;
 import org.junit.runners.Suite;
 
