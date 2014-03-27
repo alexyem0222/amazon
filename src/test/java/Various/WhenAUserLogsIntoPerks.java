@@ -29,8 +29,8 @@ public class WhenAUserLogsIntoPerks {
     }
 
     @After
-    public void closeSelenium() throws Exception{
-        loginPage.tearDown();
+    public void closeSelenium(){
+        loginPage.close();
     }
    /*
     @Test

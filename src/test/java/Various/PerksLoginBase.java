@@ -96,7 +96,4 @@ public class PerksLoginBase {
         logout.click();
     }
 
-    public void tearDown() throws Exception {
-        driver.quit();
-    }
 }
