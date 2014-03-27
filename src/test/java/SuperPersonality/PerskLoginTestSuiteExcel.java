@@ -1,14 +1,20 @@
 package SuperPersonality;
 
+import Various.SignUpPageAllFields;
+import org.junit.runners.Suite;
+
+
+
 
 import org.junit.runner.RunWith;
-import org.junit.runners.Suite;
 
 import SuperPersonality.PerksLoginTest;
 
 @RunWith(Suite.class)
 @Suite.SuiteClasses({
-        PerksLoginTest.class
+        PerksLoginTest.class,
+
+
 })
 
 public class PerskLoginTestSuiteExcel {
