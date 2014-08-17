@@ -28,6 +28,6 @@ public class BetterAmazonSearchTest {
     @After
    public void closeSelenium() {
         driver.close();
-       // driver.quit();
+        driver.quit();
 }
 }
