@@ -9,7 +9,7 @@ public class AmazonSearchResultsPage {
     private WebDriver driver;
 
     //@FindBy(css="#result_0.fstRow h3.newaps a")
-    @FindBy(xpath="/html/body/div[2]/div[3]/div/div/div[2]/div[4]/div[2]/div[3]/h3/a")
+    @FindBy(xpath="//*[@id=\"link-1\"]")
     private WebElement topResultTitle;
 
     public AmazonSearchResultsPage(WebDriver driver) {
@@ -17,7 +17,7 @@ public class AmazonSearchResultsPage {
     }
 
     public String getTopResultTitle() throws InterruptedException {
-        Thread.sleep(2000);
+        Thread.sleep(5000);
         return topResultTitle.getText();
     }
 

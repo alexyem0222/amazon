@@ -21,13 +21,13 @@ public class BetterAmazonSearchTest {
     @Test
     public void search_amazon() throws InterruptedException {
         AmazonHomePage homePage = AmazonHomePage.navigateTo(driver);
-        AmazonSearchResultsPage resultsPage = homePage.searchFor("iain banks");
-        assertThat(resultsPage.getTopResultTitle(), is("Amazon's Iain Banks Page"));
+        AmazonSearchResultsPage resultsPage = homePage.searchFor("robin");
+        assertThat(resultsPage.getTopResultTitle(), is("Robin (comics) - Wikipedia, the free encyclopedi"));
     }
 
     @After
-    public void closeSelenium() {
+   public void closeSelenium() {
         driver.close();
-        driver.quit();
+       // driver.quit();
 }
 }
