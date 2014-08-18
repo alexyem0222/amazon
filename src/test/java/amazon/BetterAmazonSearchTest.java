@@ -24,11 +24,11 @@ public class BetterAmazonSearchTest {
     public void search_amazon() throws InterruptedException {
         AmazonHomePage homePage = AmazonHomePage.navigateTo(driver);
         AmazonSearchResultsPage resultsPage = homePage.searchFor("robin");
-       // try{
+       try{
         assertThat(resultsPage.getTopResultTitle(), is("Robin (comics) - Wikipedia, the free encyclopedi"));
-   // } catch (Throwable e) {
-         // System.out.println("The result title actual and expected DO NOT match" + e.getMessage());
-       // }
+   } catch (Throwable e) {
+          System.out.println("The result title actual and expected DO NOT match" + e.getMessage());
+        }
     }
 
     @Test
