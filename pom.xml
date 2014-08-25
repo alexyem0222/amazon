@@ -26,6 +26,12 @@
           <version>1.0</version>
           <scope>test</scope>
       </dependency>
+      <dependency>
+          <groupId>com.saucelabs</groupId>
+          <artifactId>sauce_junit</artifactId>
+          <version>LATEST</version>
+          <scope>test</scope>
+      </dependency>
     <dependency>
       <groupId>junit</groupId>
       <artifactId>junit</artifactId>
