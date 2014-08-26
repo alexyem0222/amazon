@@ -26,8 +26,8 @@ public class BetterAmazonSearchTest {
     @Before
     public void setupSelenium() throws MalformedURLException {
         DesiredCapabilities desiredCapabilities = new DesiredCapabilities();
-        desiredCapabilities.setBrowserName(System.getenv("SELENIUM_BROWSER"));
-        desiredCapabilities.setVersion(System.getenv("SELENIUM_VERSION"));
+        desiredCapabilities.setBrowserName(System.getenv("Android"));
+        desiredCapabilities.setVersion(System.getenv("4.4"));
         desiredCapabilities.setCapability(CapabilityType.PLATFORM, System.getenv("SELENIUM_PLATFORM"));
         driver = new RemoteWebDriver(
                 new URL("http://alex_yem22:e8760d07-6354-4530-b74f-c91e9556f7f6@ondemand.saucelabs.com:80/wd/hub"),
