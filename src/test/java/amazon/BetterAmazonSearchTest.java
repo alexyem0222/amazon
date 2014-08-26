@@ -3,21 +3,36 @@ package amazon;
 import static org.hamcrest.Matchers.is;
 import static org.junit.Assert.assertThat;
 
+import org.jcp.xml.dsig.internal.dom.Utils;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.FixMethodOrder;
 import org.junit.Test;
 import org.junit.runners.MethodSorters;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.remote.CapabilityType;
+import org.openqa.selenium.remote.DesiredCapabilities;
+import org.openqa.selenium.remote.RemoteWebDriver;
+
+import java.net.MalformedURLException;
+import java.net.URL;
+
 
 @FixMethodOrder(MethodSorters.NAME_ASCENDING)
 public class BetterAmazonSearchTest {
 
-    private FirefoxDriver driver;
+    private WebDriver driver;
 
     @Before
-    public void setupSelenium() {
-        driver = new FirefoxDriver();
+    public void setupSelenium() throws MalformedURLException {
+        DesiredCapabilities desiredCapabilities = new DesiredCapabilities();
+        desiredCapabilities.setBrowserName(System.getenv("SELENIUM_BROWSER"));
+        desiredCapabilities.setVersion(System.getenv("SELENIUM_VERSION"));
+        desiredCapabilities.setCapability(CapabilityType.PLATFORM, System.getenv("SELENIUM_PLATFORM"));
+        WebDriver driver = new RemoteWebDriver(
+                new URL("http://alex_yem22:e8760d07-6354-4530-b74f-c91e9556f7f6@ondemand.saucelabs.com:80/wd/hub"),
+                desiredCapabilities);
     }
 
     @Test
@@ -39,8 +54,16 @@ public class BetterAmazonSearchTest {
     }
 
     @After
+
    public void closeSelenium() {
         driver.close();
         driver.quit();
 }
+
+    private void printSessionId() {
+
+        String message = String.format("SauceOnDemandSessionID=%1$s job-name=%2$s",
+                (((RemoteWebDriver) driver).getSessionId()).toString(), "BetterAmazonSearchTest");
+        System.out.println(message);
+    }
 }
