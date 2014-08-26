@@ -29,7 +29,7 @@ public class BetterAmazonSearchTest {
         desiredCapabilities.setBrowserName(System.getenv("SELENIUM_BROWSER"));
         desiredCapabilities.setVersion(System.getenv("SELENIUM_VERSION"));
         desiredCapabilities.setCapability(CapabilityType.PLATFORM, System.getenv("SELENIUM_PLATFORM"));
-        WebDriver driver = new RemoteWebDriver(
+        driver = new RemoteWebDriver(
                 new URL("http://alex_yem22:e8760d07-6354-4530-b74f-c91e9556f7f6@ondemand.saucelabs.com:80/wd/hub"),
                 desiredCapabilities);
     }
