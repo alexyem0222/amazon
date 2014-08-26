@@ -3,7 +3,6 @@ package amazon;
 import static org.hamcrest.Matchers.is;
 import static org.junit.Assert.assertThat;
 
-import com.saucelabs.selenium.client.client.factory.SeleniumFactory;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.FixMethodOrder;
