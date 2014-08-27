@@ -157,10 +157,12 @@
                         <version>2.14.1</version>
                         <configuration>
                             <parallel>classes</parallel>
-                            <threadCount>5</threadCount>
+                            <forkCount>5</forkCount>
+                            <reuseForks>true</reuseForks>
                             <includes>
                             <include>**/AmazonParallelSuite.class</include>
                             </includes>
+                            <testFailureIgnore>true</testFailureIgnore>
                         </configuration>
                     </plugin>
                 </plugins>
