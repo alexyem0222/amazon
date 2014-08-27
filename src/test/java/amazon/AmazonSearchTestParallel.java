@@ -1,5 +1,6 @@
 package amazon;
 
+import com.saucelabs.junit.Parallelized;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
@@ -18,7 +19,7 @@ import java.util.LinkedList;
 import static org.hamcrest.Matchers.is;
 import static org.junit.Assert.assertThat;
 
-@RunWith(Parameterized.class)
+@RunWith(Parallelized.class)
 public class AmazonSearchTestParallel {
 
     private String browser;
