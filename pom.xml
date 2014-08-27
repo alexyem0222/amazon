@@ -151,6 +151,9 @@
                         <configuration>
                             <parallel>classes</parallel>
                             <threadCount>5</threadCount>
+                            <includes>
+                            <include>**/AmazonParallelSuite.class</include>
+                            </includes>
                         </configuration>
                     </plugin>
                 </plugins>
