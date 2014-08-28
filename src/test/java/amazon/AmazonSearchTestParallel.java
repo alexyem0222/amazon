@@ -55,7 +55,7 @@ public class AmazonSearchTestParallel {
                 new URL("http://alex_yem22:e8760d07-6354-4530-b74f-c91e9556f7f6@ondemand.saucelabs.com:80/wd/hub"), capabilities);
     }
 
-    @Test
+  /*  @Test
     public void search_amazon() throws InterruptedException {
         AmazonHomePage homePage = AmazonHomePage.navigateTo(driver);
         AmazonSearchResultsPage resultsPage = homePage.searchFor("robin");
@@ -64,7 +64,7 @@ public class AmazonSearchTestParallel {
         }catch (Throwable e){
             System.out.println("Result title expected and actual DO NOT MATCH");
         }
-    }
+    }  */
 
     @Test
     public void search_yahoo() throws InterruptedException {
