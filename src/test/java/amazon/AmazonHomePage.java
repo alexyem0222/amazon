@@ -14,7 +14,7 @@ public class AmazonHomePage {
     @FindBy(name="p")
     private WebElement keywordsField;
 
-    @FindBy(xpath="//*[@id=\"search-submi\"]")
+    @FindBy(xpath="//*[@id=\"search-submit\"]")
     private WebElement goButton;
 
     public AmazonHomePage(WebDriver driver) {
