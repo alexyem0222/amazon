@@ -40,7 +40,7 @@ public class PersonalityMobileTry {
     @Test
     public void personalityTry(){
         WebDriverWait wait = new WebDriverWait(driver, 30);
-        driver.get("http://www.yahoo.com");
+        driver.get("http://m.yahoo.com");
        // wait.until(ExpectedConditions.titleIs("Yahoo for Mobile. Your favorite Yahoo services, on your phone."));
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.name("p")));
         WebElement yahooSearchField = driver.findElement(By.name("p"));
