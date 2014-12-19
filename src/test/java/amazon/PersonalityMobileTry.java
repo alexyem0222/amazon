@@ -11,6 +11,8 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.remote.CapabilityType;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.net.MalformedURLException;
 import java.net.URL;
@@ -38,6 +40,8 @@ public class PersonalityMobileTry {
     @Test
     public void personalityTry() throws InterruptedException {
         driver.navigate().to("http://mobile.personalityhotels.com");
+        WebDriverWait wait = new WebDriverWait(driver, 30);
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id=\"footer\"]/div/div[1]/div/div[2]/div[1]/a/div/div")));
         WebElement getPerksButton = driver.findElement(By.xpath("//*[@id=\"footer\"]/div/div[1]/div/div[2]/div[1]/a/div/div"));
         getPerksButton.click();
     }
