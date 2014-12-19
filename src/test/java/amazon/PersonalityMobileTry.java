@@ -40,11 +40,11 @@ public class PersonalityMobileTry {
     @Test
     public void personalityTry(){
         WebDriverWait wait = new WebDriverWait(driver, 30);
-        driver.get("http://mobile.personalityhotels.com");
-        wait.until(ExpectedConditions.titleIs("Welcome to Personality Hotels"));
-        wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("#footer > div > div.two-forths > div > div.textwidget > div.maxbutton-1-container > a > div > div")));
-        WebElement getPerksButton = driver.findElement(By.cssSelector("#footer > div > div.two-forths > div > div.textwidget > div.maxbutton-1-container > a > div > div"));
-        getPerksButton.click();
+        driver.get("http://mobile.yahoo.com");
+        wait.until(ExpectedConditions.titleIs("Yahoo for Mobile. Your favorite Yahoo services, on your phone."));
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.name("p")));
+        WebElement yahooSearchField = driver.findElement(By.name("p"));
+        yahooSearchField.sendKeys("mama");
     }
 
 
