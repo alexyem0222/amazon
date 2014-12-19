@@ -39,8 +39,9 @@ public class PersonalityMobileTry {
 
     @Test
     public void personalityTry(){
-        driver.navigate().to("http://mobile.personalityhotels.com");
         WebDriverWait wait = new WebDriverWait(driver, 30);
+        driver.get("http://mobile.personalityhotels.com");
+        wait.until(ExpectedConditions.titleIs("Welcome to Personality Hotels"));
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("#footer > div > div.two-forths > div > div.textwidget > div.maxbutton-1-container > a > div > div")));
         WebElement getPerksButton = driver.findElement(By.cssSelector("#footer > div > div.two-forths > div > div.textwidget > div.maxbutton-1-container > a > div > div"));
         getPerksButton.click();
