@@ -38,11 +38,11 @@ public class PersonalityMobileTry {
     }
 
     @Test
-    public void personalityTry() throws InterruptedException {
+    public void personalityTry(){
         driver.navigate().to("http://mobile.personalityhotels.com");
         WebDriverWait wait = new WebDriverWait(driver, 30);
-        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id=\"footer\"]/div/div[1]/div/div[2]/div[1]/a/div/div")));
-        WebElement getPerksButton = driver.findElement(By.xpath("//*[@id=\"footer\"]/div/div[1]/div/div[2]/div[1]/a/div/div"));
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("#footer > div > div.two-forths > div > div.textwidget > div.maxbutton-1-container > a > div > div")));
+        WebElement getPerksButton = driver.findElement(By.cssSelector("#footer > div > div.two-forths > div > div.textwidget > div.maxbutton-1-container > a > div > div"));
         getPerksButton.click();
     }
 
