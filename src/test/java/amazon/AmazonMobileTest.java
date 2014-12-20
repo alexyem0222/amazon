@@ -10,6 +10,7 @@ import org.junit.rules.TestName;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Platform;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -42,8 +43,8 @@ public class AmazonMobileTest {
     @Test
     public void basic() throws Exception {
         driver.get("http://www.amazon.com/");
-        WebDriverWait wait = new WebDriverWait(driver, 30);
-        wait.until(ExpectedConditions.presenceOfElementLocated(By.id("twotabsearchtextbox"))).sendKeys("test");
+        WebElement searchBox = driver.findElement(By.id("twotabsearchtextbox"));
+        searchBox.sendKeys("test");
     }
 
     @After
