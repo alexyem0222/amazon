@@ -5,7 +5,7 @@ import org.junit.runners.Suite;
 
 @RunWith(Suite.class)
 @Suite.SuiteClasses({
-        PersonalityMobileTry.class
+        AmazonMobileTest.class
 })
 
 public class PersonalitySuite {
