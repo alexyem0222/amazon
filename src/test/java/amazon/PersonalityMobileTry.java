@@ -30,6 +30,7 @@ public class PersonalityMobileTry {
         DesiredCapabilities caps = DesiredCapabilities.android();
         caps.setCapability("platform", "Linux");
         caps.setCapability("version", "4.4");
+        caps.setCapability("deviceName", "Samsung Galaxy S3 Emulator");
         caps.setCapability("device-orientation", "portrait");
         driver = new RemoteWebDriver(
                 new URL("http://alex_yem22:e8760d07-6354-4530-b74f-c91e9556f7f6@ondemand.saucelabs.com:80/wd/hub"),
