@@ -43,7 +43,7 @@ public class AmazonMobileTest {
     @Test
     public void basic() throws Exception {
         driver.get("http://www.amazon.com/");
-        WebElement searchBox = driver.findElement(By.id("twotabsearchtextbox"));
+        WebElement searchBox = driver.findElement(By.name("k"));
         searchBox.sendKeys("test");
     }
 
