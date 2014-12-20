@@ -23,7 +23,7 @@ import static org.junit.Assert.assertThat;
 @FixMethodOrder(MethodSorters.NAME_ASCENDING)
 public class PersonalityMobileTry {
 
-    private WebDriver driver;
+    public WebDriver driver;
 
     @Before
     public void setupSelenium() throws MalformedURLException {
