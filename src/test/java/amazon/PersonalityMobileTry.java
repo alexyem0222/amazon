@@ -9,6 +9,8 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.net.URL;
 
@@ -35,6 +37,8 @@ public class PersonalityMobileTry {
     @Test
     public void runTest() throws Exception {
         driver.get("http://www.yahoo.com");
+        WebDriverWait wait = new WebDriverWait(driver, 30);
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.name("p")));
         WebElement searchBox = driver.findElement(By.name("p"));
         searchBox.sendKeys("test");
     }
