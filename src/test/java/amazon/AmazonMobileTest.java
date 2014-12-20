@@ -32,7 +32,7 @@ public class AmazonMobileTest {
         capabillities.setCapability("version", "5.0");
         capabillities.setCapability("platform", Platform.MAC);
         this.driver = new RemoteWebDriver(
-                new URL("http://username-string:access-key-string@ondemand.saucelabs.com:80/wd/hub"),
+                new URL("http://alex_yem22:e8760d07-6354-4530-b74f-c91e9556f7f6@ondemand.saucelabs.com:80/wd/hub"),
                 capabillities);
     }
 
