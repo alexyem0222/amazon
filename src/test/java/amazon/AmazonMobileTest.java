@@ -43,7 +43,7 @@ public class AmazonMobileTest {
     public void basic() throws Exception {
         driver.get("http://www.amazon.com/");
         WebDriverWait wait = new WebDriverWait(driver, 30);
-        wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("twotabsearchtextbox"))).sendKeys("test");
+        wait.until(ExpectedConditions.presenceOfElementLocated(By.id("twotabsearchtextbox"))).sendKeys("test");
     }
 
     @After
