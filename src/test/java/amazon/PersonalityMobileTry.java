@@ -38,7 +38,9 @@ public class PersonalityMobileTry {
     public void runTest() throws Exception {
         driver.get("http://www.google.com");
         WebDriverWait wait = new WebDriverWait(driver, 60);
-        wait.until(ExpectedConditions.visibilityOfElementLocated(By.name("q"))).sendKeys("test");
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.name("q")));
+        WebElement searchBox = driver.findElement(By.name("q"));
+        searchBox.sendKeys("test");
     }
 
     @After
