@@ -19,7 +19,7 @@ public class GoogleTry {
     }
      @Test
     public void searchGoogle(){
-        WebElement searchBox = driver.findElement(By.name("q"));
+        WebElement searchBox = driver.findElement(By.name("x"));
         searchBox.sendKeys("hello");
     }
     @After
